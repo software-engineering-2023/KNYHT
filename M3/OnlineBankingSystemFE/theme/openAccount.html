@@ -141,88 +141,7 @@
     }
 
     div {
-        margin: auto;
-    }
-
-
-    .result {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #f2f2f2;
-    }
-
-
-    .popup {
-        z-index: 9;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        text-align: left;
-        display: none;
-    }
-
-    .popup h2 {
-        text-align: center;
-    }
-
-    .overlay {
-        z-index: 9;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: none;
-    }
-
-    .buttonOK {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .buttonCancel {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #ececec;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .buttonpay {
-        display: block;
-        width: 30%;
-        margin: auto;
-        border-radius: 8px;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .bill-icon {
-        width: 80px;
-        height: 80px;
-        margin-right: 10px;
+        margin-bottom: 30px;
     }
 </style>
 
@@ -231,13 +150,13 @@
     <div class="container">
         <div class="row">
             <div class="col-8 mx-auto text-center">
-                <h2 class="mb-3 text-capitalize">Bill Payment</h2>
+                <h2 class="mb-3 text-capitalize">Open Bank Account</h2>
                 <ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
                     <li class="list-inline-item"><a href="home.html">Home</a>
                     </li>
                     <li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
                     </li>
-                    <li class="list-inline-item">/ &nbsp; <a href="payBill.html">Bill Payment</a>
+                    <li class="list-inline-item">/ &nbsp; <a href="openAccount.html">Open Bank Account</a>
                     </li>
                 </ul>
             </div>
@@ -289,22 +208,21 @@
         </svg>
     </div>
 </section>
-
 <section class="section-sm">
     <div class="container">
         <div class="row g-5">
-            <div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="bg-white shadow rounded-lg p-4 sticky-top" style="top: 30px;">
-                    <h4 class="has-line-end">Bills</h4>
+                    <h4 class="has-line-end">Content</h4>
                     <nav id="TableOfContents">
                         <ul>
-                            <li><a href="#GasBill">Gas Bill</a>
-                            </li>
-                            <li><a href="#WaterBill">Water Bill</a>
-                            </li>
-                            <li><a href="#ElecBill">Electricity Bill</a>
-                            </li>
-                            <li><a href="#TelBill">Telephone Bill</a>
+                            <li><a href="#openAccount">Open Bank Account Form</a>
+                                <ul>
+                                    <li><a href="#personalInfo">Personal Information Section</a>
+                                    </li>
+                                    <li><a href="#EmpInfo">Employment & Income Section </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -312,309 +230,127 @@
             </div>
             <div class="col-lg-8">
                 <div class="content">
-                    <h2 id="GasBill"><img class="bill-icon" src="images/gasBill.png" alt="Gas Bill">Gas Bill</h2>
-                    <form id=" gasBill" accept-charset="UTF-8" onsubmit="payGas(event)">
+                    <h2 id="openAccount">Open Account Form</h2>
+                    <p>It is important that you complete this application form in full to enable us to consider your
+                        application.</p>
+                    <form accept-charset="UTF-8">
+                        <h3>Account Type</h3>
+                        <input type="radio" id="CurrentO" name="typeO" value="Current" required="required">
+                        <label for="CurrentO">Current</label>
+                        <br>
+
+                        <input type="radio" id="SavingO" name="typeO" value="Saving">
+                        <label for="SavingO">Saving</label>
+                        <br>
+                        <h3 id="personalInfo">Personal Information</h3>
                         <div class="form-row">
-                            <h4>Select Your Gas Service Provider</h4>
-                            <input type="radio" id="Taqa" name="gas" value="Taqa" required="required">
-                            <label for="Taqa">Taqa</label>
-                            <br>
-
-                            <input type="radio" id="NAT" name="gas" value="NAT">
-                            <label for="NAT">NAT gas</label>
-                            <br>
-
-                            <input type="radio" id="Petrotrade" name="gas" value="Petrotrade">
-                            <label for="Petrotrade">Petrotrade</label>
-                            <br>
-
-
-                            <h4>Customer Data</h4>
-
                             <div class="form-group col-md-9">
-                                <label for="subNumG">Subscription Number</label>
-                                <input type="text" name="subNumG" class="form-control" id="subNumG" placeholder="456789"
+                                <label for="exampleInputName">Full Name</label>
+                                <input type="text" name="fullname" class="form-control" id="exampleInputName"
+                                    placeholder="Enter your name and surname" required="required">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="birthdate">Birth Date</label>
+                                <input class="form-control" name="birthdate" type="date" placeholder="2002-01-01"
+                                    id="birthdate" required="required">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="Nationality">Nationality</label>
+                                <input type="text" name="Nationality" class="form-control" id="Nationality"
+                                    placeholder="Enter your nationality" required="required">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="exampleInputEmail1" required="required">Email address</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter your email address"
+                                    required="required">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" name="address" class="form-control" id="inputAddress"
+                                    placeholder="1234 Main St" required="required">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="inputCountry">Country of Residence</label>
+                                <input type="text" name="Country" class="form-control" id="inputCountry"
+                                    placeholder="Cairo" required="required">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" name="zip" class="form-control" id="inputZip" placeholder="34000"
                                     required="required">
                             </div>
 
                             <div class="form-group col-md-9">
-                                <label for="phone">Phone Number</label>
-                                <input type="text" name="phone" class="form-control" id="phone" placeholder="01234567"
-                                    required="required">
+                                <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+                                <input class="form-control" name="tel" type="tel" placeholder="0123456789"
+                                    id="example-tel-input" required="required">
                             </div>
-                        </div>
-                        <br>
-                        <button type="submit" class="buttonpay">View Amount</button>
-                    </form>
-                    <div class="result" id="result"></div>
-                    <div class="overlay" id="overlay"></div>
-                    <div class="popup" id="popup">
-                        <h2>Amount Details</h2>
-                        <h5 id="gasDetailsDIV"></h5>
-                        <br>
-                        <button class="buttonOK" onclick="redirectToPayBill()">Pay</button>
-                        <button class="buttonCancel" onclick="reloadPage()">Cancel</button>
-                    </div>
-                    <script>
-                        function payGas(event) {
-                            event.preventDefault(); // Prevent form submission 
-                            var gasDetails = "<br>Amount to be paid: $100.0";
-                            document.getElementById("gasDetailsDIV").innerHTML = gasDetails;
-
-                            // Show the receipt popup
-                            var overlay = document.getElementById("overlay");
-                            var popup = document.getElementById("popup");
-                            overlay.style.display = "block";
-                            popup.style.display = "block";
-                        }
-
-
-                        function redirectToPayBill() {
-                            // Refresh the page to reset the form
-                            alert("Your Payment was Successful!")
-                            window.location.href = "payBill.html";
-                        }
-
-                        function reloadPage() {
-                            location.reload();
-                        }
-                    </script>
-
-                    <br>
-                    <br>
-                </div>
-            </div>
-
-
-            <br>
-            <br>
-            <!--WaterBill-->
-            <div class="col-lg-8">
-                <div class="content">
-                    <h2 id="WaterBill"><img class="bill-icon" src="images/waterBill.png" alt="Water Bill">Water Bill
-                    </h2>
-                    <form id="waterBillForm" accept-charset="UTF-8" onsubmit="payWater(event)">
-                        <div class="form-row">
-                            <h4>Select Your Water Service Provider</h4>
-                            <input type="radio" id="cairoW" name="water" value="cairoW" required="required">
-                            <label for="cairoW">Cairo Water Company</label>
-                            <br>
-
-                            <input type="radio" id="alexW" name="water" value="alexW">
-                            <label for="alexW">AlexWater</label>
-                            <br>
-
-                            <input type="radio" id="gizaW" name="water" value="gizaW">
-                            <label for="gizaW">Giza Water Company</label>
-                            <br>
-
-
-                            <h4>Customer Data</h4>
-
-                            <div class="form-group col-md-9">
-                                <label for="subNumW">Subscription Number</label>
-                                <input type="text" name="subNumW" class="form-control" id="subNumW" placeholder="456789"
-                                    required="required">
-                            </div>
-
-                            <div class="form-group col-md-9">
-                                <label>Phone Number</label>
-                                <input type="text" name="phone" class="form-control" id="phone" placeholder="01234567"
-                                    required="required">
-                            </div>
-                        </div>
-                        <br>
-                        <button type="submit" class="buttonpay">View Amount</button>
-                    </form>
-
-                    <div class="result" id="resultWater"></div>
-                    <div class="overlay" id="overlayWater"></div>
-                    <div class="popup" id="popupWater">
-                        <h2>Amount Details</h2>
-                        <h5 id="waterDetailstag"></h5>
-                        <br>
-                        <button class="buttonOK" onclick="redirectToPayBill()">Pay</button>
-                        <button class="buttonCancel" onclick="reloadPage()">Cancel</button>
-                    </div>
-                    <script>
-                        function payWater(event) {
-                            event.preventDefault(); // Prevent form submission 
-                            var waterDetails = "<br>Amount to be paid: $300.0";
-                            document.getElementById("waterDetailstag").innerHTML = waterDetails;
-
-                            // Show popup
-                            var overlay = document.getElementById("overlayWater");
-                            var popup = document.getElementById("popupWater");
-                            overlay.style.display = "block";
-                            popup.style.display = "block";
-                        }
-
-
-                        function redirectToPayBill() {
-                            // Refresh the page to reset the form
-                            alert("Your Payment was Successful!")
-                            window.location.href = "payBill.html";
-                        }
-
-                        function reloadPage() {
-                            location.reload();
-                        }
-                    </script>
-
-                    <br>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <!--ElectricityBill-->
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <div class="content">
-                        <h2 id="ElecBill"><img class="bill-icon" src="images/electricityBill.png"
-                                alt="Electricity Bill">Electricity
-                            Bill
-                        </h2>
-                        <form id="ElecBillForm" accept-charset="UTF-8" onsubmit="payElec(event)">
-                            <div class="form-row">
-                                <h4>Select Your Electricity Service Provider</h4>
-                                <input type="radio" id="NcairoE" name="elec" value="NElec" required="required">
-                                <label for="NcairoE">North Cairo Electricity Distribution Co.</label>
+                            <div class="form-group mt-3">
+                                <label class="mr-4">Upload document (scanned National ID/Passport):</label>
                                 <br>
-
-                                <input type="radio" id="ScairoE" name="elec" value="SElec">
-                                <label for="ScairoE">South Cairo Electricity Distribution Co.</label>
-                                <br>
-
-                                <input type="radio" id="alexE" name="elec" value="alexElec">
-                                <label for="alexE">Alexandria Electricity Distribution Co.</label>
-                                <br>
-
-
-                                <h4>Customer Data</h4>
-                                <div class="form-group col-md-9">
-                                    <label for="payCode">Payment Code</label>
-                                    <input type="text" name="payCode" class="form-control" id="payCode"
-                                        placeholder="456789" required="required">
-                                </div>
-
-                                <div class="form-group col-md-9">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="text" name="phone" class="form-control" id="phone"
-                                        placeholder="01234567" required="required">
-                                </div>
+                                <input type="file" name="file" required="required">
                             </div>
-                            <br>
-                            <button type="submit" class="buttonpay">View Amount</button>
-                        </form>
-                        <div class="result" id="resultE"></div>
-                        <div class="overlay" id="overlayE"></div>
-                        <div class="popup" id="popupE">
-                            <h2>Amount Details</h2>
-                            <h5 id="ElecDetailstag"></h5>
-                            <br>
-                            <button class="buttonOK" onclick="redirectToPayBill()">Pay</button>
-                            <button class="buttonCancel" onclick="reloadPage()">Cancel</button>
+                            <h3 id="EmpInfo">Employment and Income </h3>
                         </div>
-                        <script>
-                            function payElec(event) {
-                                event.preventDefault(); // Prevent form submission 
-                                var elecDetails = "<br>Amount Paid: $1000.0";
-                                document.getElementById("ElecDetailstag").innerHTML = elecDetails;
+                        <div class="content">
+                            <p>Employement Status</p>
 
-                                // Show the receipt popup
-                                var overlay = document.getElementById("overlayE");
-                                var popup = document.getElementById("popupE");
-                                overlay.style.display = "block";
-                                popup.style.display = "block";
-                            }
+                            <input type="radio" id="Salaried" name="EmpStatus" value="Salaried">
+                            <label for="Salaried">Salaried</label>
+                            <br>
 
+                            <input type="radio" id="Self-Employed" name="EmpStatus" value="Self-Employed">
+                            <label for="Self-Employed">Self-Employed</label>
+                            <br>
 
-                            function redirectToPayBill() {
-                                // Refresh the page to reset the form
-                                alert("Your Payment was Successful!")
-                                window.location.href = "payBill.html";
-                            }
-
-                            function reloadPage() {
-                                location.reload();
-                            }
-                        </script>
-
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <!--Telephone Bill-->
-        <div class="col-lg-8">
-            <div class="content">
-                <h2 id="TelBill"><img class="bill-icon" src="images/telephoneBill.png" alt="Telephone Bill">Telephone
-                    Bill
-                </h2>
-                <form id="telBillForm" accept-charset="UTF-8" onsubmit="payTel(event)">
-                    <div class="form-row">
+                            <input type="radio" id="Other" name="EmpStatus" value="Other">
+                            <label for="Other">Other</label>
+                            <br>
+                        </div>
                         <div class="form-group col-md-9">
-                            <label for="Llnum">Landline Number</label>
-                            <input type="text" name="phone" class="form-control" id="Llnum" placeholder="12345678"
-                                required="required">
+                            <label for="inputIncome">Monthly Income</label>
+                            <input type="text" name="income" class="form-control" id="salary" placeholder="$2000.0">
                         </div>
-                    </div>
-                    <br>
 
-                    <button type="submit" class="buttonpay">View Amount</button>
-                </form>
-                <div class="result" id="resultTel"></div>
-                <div class="overlay" id="overlayTel"></div>
-                <div class="popup" id="popupTel">
-                    <h2>Amount Details</h2>
-                    <h5 id="TelDetailstag"></h5>
-                    <br>
-                    <button class="buttonOK" onclick="redirectToPayBill()">Pay</button>
-                    <button class="buttonCancel" onclick="reloadPage()">Cancel</button>
+
+                        <div>
+                            <h5>Privacy Notice Overview: </h5>
+                            <p>
+                                - How we’ll use your information<br>
+                                We’ll use it to provide any products and services you’ve
+                                requested and other purposes e.g.:
+                                • to confirm your identity and address
+                                • to understand how you use your accounts
+                                • to carry out your instructions
+                                • to improve our products and services
+                                • to offer you other services we believe may benefit you unless you
+                                ask us not to.
+                                We’ll only use your information where we’re allowed to by law
+                                e.g. carrying out an agreement we have with you, fulfilling a legal
+                                obligation, because we have a legitimate business interest or
+                                where you agree to it.
+                                We may use automated systems to help us make credit decisions
+                                as well as carrying out fraud and money laundering checks.</p>
+
+                            <input type="radio" id="agree" name="agree" value="agree" required="required">
+                            <label for="agree">I understand that you will
+                                use my personal information as set out in our Privacy Notice</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+
+                    <hr>
+                    <hr>
+
+
                 </div>
-                <script>
-                    function payTel(event) {
-                        event.preventDefault(); // Prevent form submission 
-                        var TelDetails = "<br>Amount Paid: $50.0";
-                        document.getElementById("TelDetailstag").innerHTML = TelDetails;
-
-                        // Show the receipt popup
-                        var overlay = document.getElementById("overlayTel");
-                        var popup = document.getElementById("popupTel");
-                        overlay.style.display = "block";
-                        popup.style.display = "block";
-                    }
-
-                    function redirectToPayBill() {
-                        // Refresh the page to reset the form
-                        alert("Your Payment was Successful!")
-                        window.location.href = "payBill.html";
-                    }
-
-                    function reloadPage() {
-                        location.reload();
-                    }
-                </script>
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
             </div>
         </div>
-
-    </div>
     </div>
 </section>
+
 <footer class="section-sm bg-tertiary">
 	<div class="container">
 		<div class="row justify-content-between">
