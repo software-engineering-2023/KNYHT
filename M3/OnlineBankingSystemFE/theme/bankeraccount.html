@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>KNYHT - Online Banking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="This is meta description">
+    <meta name="author" content="Themefisher">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+
+
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="wallet" />
+
+    <!-- # Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- # CSS Plugins -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/brands.css">
+    <link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+    <!-- # Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- navigation -->
+<header class="navigation bg-tertiary">
+    <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+      <div class="container">
+        <a class="navbar-brand" href="adminhome.html">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.jpg" alt="Wallet">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"> <a class="nav-link" href="adminhome.html">Home</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="technicalissues.html">Techninal Issues</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="bankeraccount.html">create banker account</a>
+            </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /navigation -->
+  
+  
+<style>
+button{
+    color: white;
+    background-color: green;
+}
+label{
+    color: black;
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: black;
+  
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  color: black;
+}
+</style>
+
+<body>
+
+    <h2>Create banker account</h2>
+
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value=" "><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value=" "><br>
+     <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" value=" "><br>
+     <label for="mobilenumber">Mobile Number:</label><br>
+    <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
+   
+  </form> 
+  
+  <button type="button" onclick="alert('Account created successfully!')">Submit</button>
+
+</body>

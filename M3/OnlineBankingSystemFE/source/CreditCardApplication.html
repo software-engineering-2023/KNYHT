@@ -6,14 +6,27 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+input{
+  color: white;
+  background-color: green;
+}
 
-td, th {
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  
+}
+td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
   color: black;
   
 }
+
 
 
 tr:nth-child(even) {
@@ -25,13 +38,16 @@ tr:nth-child(even) {
 
 <h2>Credit Card Applications</h2>
 
-<table>
+<table id="creditcardtable">
   <tr>
-    <th>Account_Number</th>
-    <th>Client_Name</th>
-    <th>Mobile_Number</th>
+    <th>Account Number</th>
+    <th>Client Name</th>
+    <th>Mobile Number</th>
     <th>Email</th>
     <th>Status</th>
+    <th></th>
+    
+    
     
     
   </tr>
@@ -47,6 +63,9 @@ tr:nth-child(even) {
         <option value="accept">Accept</option>
         <option value="reject">Reject</option>
       </select>
+      
+        </td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
       <br><br>
     </form></td>
   </tr>
@@ -64,6 +83,7 @@ tr:nth-child(even) {
       </select>
       <br><br>
     </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
   </tr>
   <tr>
     <td>567443338790</td>
@@ -79,6 +99,7 @@ tr:nth-child(even) {
       </select>
       <br><br>
     </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
   </tr>
   <tr>
     <td>344455332911</td>
@@ -94,6 +115,7 @@ tr:nth-child(even) {
       </select>
       <br><br>
     </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
   </tr>
   <tr>
     <td>993322432111</td>
@@ -109,11 +131,18 @@ tr:nth-child(even) {
       </select>
       <br><br>
     </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
   </tr>
   
 
 </table>
-
+<script>
+  function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("creditcardtable").deleteRow(i);
+  }
+  </script>
 </body>
+
 
 

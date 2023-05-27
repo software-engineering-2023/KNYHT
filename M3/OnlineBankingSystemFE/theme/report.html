@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -5,3 +7,211 @@
  // GITHUB: https://github.com/themefisher/
 -->
 
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>KNYHT - Online Banking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="This is meta description">
+    <meta name="author" content="Themefisher">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+
+
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="wallet" />
+
+    <!-- # Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- # CSS Plugins -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/brands.css">
+    <link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+    <!-- # Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- navigation -->
+<header class="navigation bg-tertiary">
+    <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+      <div class="container">
+        <a class="navbar-brand" href="bankerhome.html">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.jpg" alt="Wallet">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"> <a class="nav-link" href="bankerhome.html">Home</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="report.html">Report</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="clientaccount.html">Create Client Account</a>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Applications</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="CreditCardApplication.html">Credit Cards</a>
+                </li>
+                <li><a class="dropdown-item " href="LoanApplication.html">Loans</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /navigation -->
+  
+  
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: black;
+  
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+input{
+  color: white;
+  background-color: green;
+}
+</style>
+
+<body>
+
+<h2>Credit Card Loss Reports</h2>
+
+<table id="reporttable">
+  <tr>
+    <th>Account Number</th>
+    <th>Card Name Holder</th>
+    <th>Card Number</th>
+    <th>Expiry Date</th>
+    <th>Status</th>
+    <th></th>
+    
+    
+    
+    
+  </tr>
+  <tr>
+    <td>003425276890</td>
+    <td>Francisco Chang</td>
+    <td>2345143565345678</td>
+    <td>09/04/2024</td>
+    <td><form>
+      <label for="status"></label>
+      <select>
+        <option value="unresolved">Unresloved</option>
+        <option value="Deactivate">Deactivate</option>
+      </select>
+      
+        </td>
+      <br><br>
+    </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>456372689005</td>
+    <td>Roland Mendel</td>
+    <td>3434342266890764</td>
+    <td>10/11/2025</td>
+    <td><form>
+      <label for="status"></label>
+      <select>
+        <option value="unresolved">Unresloved</option>
+        <option value="Deactivate">Deactivate</option>
+      </select>
+      <br><br>
+    </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>567443338790</td>
+    <td>Helen Bennett</td>
+    <td>2323231167890000</td>
+    <td>17/12/2024</td>
+    <td><form>
+      <label for="status"></label>
+      <select>
+        <option value="unresolved">Unresloved</option>
+        <option value="Deactivate">Deactivate</option>
+      </select>
+      <br><br>
+    </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>344455332911</td>
+    <td>Yoshi Tannamuri</td>
+    <td>1112226780009878</td>
+    <td>16/03/2024</td>
+    <td><form>
+      <label for="status"></label>
+      <select>
+        <option value="unresolved">Unresloved</option>
+        <option value="Deactivate">Deactivate</option>
+      </select>
+      <br><br>
+    </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>993322432111</td>
+    <td>Maria Anders</td>
+    <td>6666000022221111</td>
+    <td>22/12/2025</td>
+    <td><form>
+      <label for="status"></label>
+      <select>
+        <option value="unresolved">Unresloved</option>
+        <option value="Deactivate">Deactivate</option>
+      </select>
+      <br><br>
+    </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+  </tr>
+  
+
+</table>
+<script>
+  function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("reporttable").deleteRow(i);
+  }
+  </script>
+</body>
