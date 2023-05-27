@@ -143,7 +143,78 @@
 			</div>
 		</div>
 	</div>
-	<div class="has-shapes">
+	<div class="col-lg-10">
+		<div class="shadow rounded p-5 bg-white">
+			<div class="row">
+				<div class="col-12 mb-4">
+					<h4>please report your concern</h4>
+				</div>
+				<div class="col-lg-6">
+					<div class="contact-form">
+						<form action="#!">
+							<div class="form-group mb-4 pb-2">
+								<label for="exampleFormControlInput1" class="form-label">Full Name</label>
+								<input type="text" class="form-control shadow-none" id="contact_name">
+							</div>
+							<div class="form-group mb-4 pb-2">
+								<label for="exampleFormControlInput1" class="form-label">Email address</label>
+								<input type="email" class="form-control shadow-none" id="contact_email">
+							</div>
+							<div class="form-group mb-4 pb-2">
+								<label for="exampleFormControlTextarea1" class="form-label">Write
+									Message</label>
+								<textarea class="form-control shadow-none" id="exampleFormControlTextarea1"
+									rows="3"></textarea>
+							</div>
+							<button class="btn btn-primary w-100" type="submit">Send Message</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-6 mt-5 mt-lg-0">
+					<div class="contact-info">
+						<div class="block mt-0">
+							<h4 class="h5">Still Have Questions?</h4>
+							<div class="content">Call Us We Will Be Happy To Help
+								<br> <a href="tel:+3301563965">+3301563965</a>
+								<br>Monday - Friday
+								<br>9AM TO 8PM Eastern Time
+							</div>
+						</div>
+						<div class="block mt-4">
+							<h4 class="h5">Canada Office</h4>
+							<div class="content">231 Ross Street.
+								<br>K7A 1C2.
+								<br>Smiths Falls
+							</div>
+						</div>
+						<div class="block mt-4">
+							<h4 class="h5">UK Office</h4>
+							<div class="content">57 Folkestone Road.
+								<br>AB54 5XQ,
+								<br>Winston
+							</div>
+						</div>
+						<div class="block">
+							<ul class="list-unstyled list-inline my-4 social-icons">
+								<li class="list-inline-item me-3"><a title="Explorer Facebook Profile"
+										class="text-black" href="https://facebook.com/"><i
+											class="fab fa-facebook-f"></i></a>
+								</li>
+								<li class="list-inline-item me-3"><a title="Explorer Twitter Profile"
+										class="text-black" href="https://twitter.com/"><i
+											class="fab fa-twitter"></i></a>
+								</li>
+								<li class="list-inline-item me-3"><a title="Explorer Instagram Profile"
+										class="text-black" href="https://instagram.com/"><i
+											class="fab fa-instagram"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--<div class="has-shapes">
 		<svg class="shape shape-left text-light" viewBox="0 0 192 752" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M-30.883 0C-41.3436 36.4248 -22.7145 75.8085 4.29154 102.398C31.2976 128.987 65.8677 146.199 97.6457 166.87C129.424 187.542 160.139 213.902 172.162 249.847C193.542 313.799 149.886 378.897 129.069 443.036C97.5623 540.079 122.109 653.229 191 728.495"
@@ -187,10 +258,88 @@
 				d="M863.24 249.547C859.083 220.07 833.125 197.778 805.236 187.353C777.347 176.927 747.051 175.634 717.64 170.986C688.229 166.321 657.77 157.237 637.639 135.306C601.828 96.2707 612.319 35.6149 606.738 -17.0538C598.276 -96.7443 544.462 -170.052 470.974 -202"
 				stroke="currentColor" stroke-miterlimit="10" />
 		</svg>
-	</div>
+	</div>-->
 </section>
+<!----------------------------------------start---------------------------------------------------------
 
-<section class="section">
+<footer id="contact">
+	
+	<div class="container">
+		<link rel = "stylesheet" href = "technichalissue.scss">
+	
+		<div class="row">
+			<h2>Report</h2>
+			
+			
+			<form role="form" id="feedbackForm" data-toggle="validator" data-disable="false">
+				
+				<div class="form-group">
+					
+					<label class="control-label" for="name">Name <span>*</span></label>
+					<div class="input-group">
+						
+						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required/>
+						<span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+					</div>
+					<span class="help-block" style="display: none;">Please enter your name.</span>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="email">Reason for Contact <span>*</span></label>
+					<select name="reason" class="form-control" required>
+           
+                <option value="Place Order">credit card loss</option>
+                <option value="Report Issue">Report Issue</option>
+              </select>
+					<span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="email">Email <span>*</span></label>
+					<div class="input-group">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required/>
+						<span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+					</div>
+					<span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="message">Message <span>*</span></label>
+					<div class="input-group">
+						<textarea rows="5" cols="30" class="form-control" id="message" name="message" placeholder="Enter your message" required></textarea>
+						<span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+					</div>
+					<span class="help-block" style="display: none;">Please enter a message.</span>
+				</div>
+				<div class="form-group">
+					<div class="g-recaptcha" data-sitekey="your_site_key"></div>
+					<span class="help-block" style="display: none;">Please check that you are not a robot.</span>
+				</div>
+				<span class="help-block" style="display: none;">Please enter a the security code.</span>
+				<button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg" data-loading-text="Sending..." style="display: block; margin-top: 10px;">Send Feedback</button>
+			</form>
+			<br>
+			<!--<div class="social">
+				<a href="https://codepen.io/shvvffle/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+				<a href="https://pt.linkedin.com/in/marinamarques9" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="https://github.com/shvvffle" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+			</div>-->
+			<!--<p class="copyright">© Marina Marques 2016</p>-->
+		</div>
+		<!-- end row contact -->
+	</div>
+	<!-- end container footer section -->
+</footer>
+<!-- end footer -->
+
+<!-- to check http://www.nfriedly.com/techblog/2009/11/how-to-build-a-spam-free-contact-forms-without-captchas/ -->
+
+
+
+
+
+
+
+<!--------------------------------------end----------------------------------------------------------->
+
+<!--<section class="section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9">
@@ -298,7 +447,7 @@
 						</div>
 						<div class="col-12">
 							<nav class="mt-4">
-								<!-- pagination -->
+								<! pagination 
 								<nav class="mb-md-50">
 									<ul class="pagination justify-content-center">
 										<li class="page-item active "> <a href="blog.html" class="page-link">
@@ -322,7 +471,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3">
-				<!-- categories -->
+				  categories 
 				<div class="widget widget-categories">
 					<h5 class="widget-title"><span>Category</span></h5>
 					<ul class="list-unstyled widget-list">
@@ -338,7 +487,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- tags -->
+				 tags 
 				<div class="widget widget-tags">
 					<h4 class="widget-title"><span>Tags</span></h4>
 					<ul class="list-inline widget-list widget-list-inline taxonomies-list">
@@ -358,10 +507,10 @@
 						</li>
 					</ul>
 				</div>
-				<!-- latest post -->
+				<!- latest post 
 				<div class="widget">
 					<h5 class="widget-title"><span>Latest Article</span></h5>
-					<!-- post-item -->
+					<!- post-item 
 					<ul class="list-unstyled widget-list">
 						<li class="d-flex widget-post align-items-center">
 							<a class="text-black" href="/blog/elements/">
@@ -408,7 +557,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- Social -->
+				<!- Social 
 				<div class="widget">
 					<h4 class="widget-title"><span>Social Links</span></h4>
 					<ul class="list-unstyled list-inline mb-0 social-icons">
@@ -426,7 +575,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <footer class="section-sm bg-tertiary">
 	<div class="container">

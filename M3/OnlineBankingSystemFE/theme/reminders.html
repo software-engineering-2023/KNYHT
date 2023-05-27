@@ -134,16 +134,37 @@
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
 				<h2 class="mb-3 text-capitalize">Reminders</h2>
+				
+		
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
-					<li class="list-inline-item"><a href="home.html">Home</a>
+					<li class="list-inline-item"><a href="index.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="reminders.html">Reminders</a>
 					</li>
 				</ul>
+				<!-----------------------------------------start--------------------------------------->
+		<input type="text"id="todo-title" class="textfield" placeholder="type your reminder">
+
+        <input type="date" id="date-picker" class="btn btn-primary w-5">
+
+       <!--- <button onclick="addTodo()">Add reminder</button>-->
+		<button  onclick="addTodo()" class="btn btn-primary w-5" type="submit">Add reminder</button>
+		
+
+
+        <div id="todo-list"></div>
+
+	  <!------------------------------end-------------------------------------------------------->
 			</div>
 		</div>
 	</div>
-	<div class="has-shapes">
+
+
+
+
+
+
+	<!--<div class="has-shapes">
 		<svg class="shape shape-left text-light" viewBox="0 0 192 752" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M-30.883 0C-41.3436 36.4248 -22.7145 75.8085 4.29154 102.398C31.2976 128.987 65.8677 146.199 97.6457 166.87C129.424 187.542 160.139 213.902 172.162 249.847C193.542 313.799 149.886 378.897 129.069 443.036C97.5623 540.079 122.109 653.229 191 728.495"
@@ -187,10 +208,208 @@
 				d="M863.24 249.547C859.083 220.07 833.125 197.778 805.236 187.353C777.347 176.927 747.051 175.634 717.64 170.986C688.229 166.321 657.77 157.237 637.639 135.306C601.828 96.2707 612.319 35.6149 606.738 -17.0538C598.276 -96.7443 544.462 -170.052 470.974 -202"
 				stroke="currentColor" stroke-miterlimit="10" />
 		</svg>
-	</div>
+	</div>-->
 </section>
+<style>
+	/* CSS */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 60px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 13px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 20px;
+}
 
-<section class="section">
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+  margin-right: 50px;
+}
+.todo-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+
+.todo-item {
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.delete-button {
+  margin-left: 10px;
+}
+.todo-list:date{
+	font-weight: bolder;
+}
+.icon {
+  margin-right: 10px;
+}
+.textfield{
+	width: 355px;
+}
+
+</style>
+
+<script>
+	//Model section
+
+let todos;
+
+
+//Retrieve data from LocalStorage
+
+const savedTodos = JSON.parse(localStorage.getItem('todos'));
+
+//Check if it's an array
+
+if(Array.isArray(savedTodos)){
+
+    todos = savedTodos;
+    }else{
+        todos = [{
+            title: 'Write notes',
+            dueDate: '2022-07-24',
+            id: 'id1'
+        },
+        
+        {
+            title: 'Submit assignment',
+            dueDate: '2022-07-22',
+            id: 'id2'
+        },
+        
+        {
+            title: 'Cook dinner',
+            dueDate: '2022-07-23',
+            id: 'id3'
+        }]
+    }
+
+//Creates a todo
+
+function createTodo(title, dueDate){
+
+    const id = '' + new Date().getTime();
+
+    todos.push({
+        title: title,
+        dueDate: dueDate,
+        id: id
+    });
+
+    saveTodos();
+} 
+
+//Deletes a todo
+
+function removeTodo(idToDelete){
+    todos = todos.filter(function(todo){
+        if(todo.id === idToDelete){
+            return false
+        }else{
+            return true;
+        }
+    });
+}
+
+function saveTodos(){
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+render();
+
+//Controller section
+
+
+function addTodo(){
+    const textbox = document.getElementById('todo-title');
+    const title = textbox.value;
+
+    const datePicker = document.getElementById('date-picker');
+    const dueDate = datePicker.value;
+
+    createTodo(title, dueDate);
+    render();
+}   
+
+    function deleteTodo(event){
+        const deleteButton = event.target;
+		
+        const idToDelete = deleteButton.id;
+		
+
+        removeTodo(idToDelete);
+        render();
+    }
+
+//View section
+    function render(){
+	
+
+        //reset our list so that one value can be added per click
+
+        document.getElementById('todo-list').innerHTML = '';
+		
+		todos.className = 'todo-list';
+		
+		
+		
+        todos.forEach(function(todo){
+            const element = document.createElement('div');
+			element.animate = "position: absolute";
+			todo.dueDate.className = 'todo-list:date';
+			element.className = 'todo-item'; 
+			
+			
+			
+            element.innerText = todo.title + ' ' + todo.dueDate + "       " + ' ';
+            
+            const deleteButton = document.createElement('button');
+			deleteButton.className = 'button-33';
+            deleteButton.innerText = 'Delete';
+		
+
+            deleteButton.onclick = deleteTodo;
+            deleteButton.id = todo.id;
+            element.appendChild(deleteButton);
+            
+            const todoList = document.getElementById('todo-list')
+            todoList.appendChild(element);
+        });
+    }
+
+
+
+
+
+
+
+
+
+</script>
+
+<!--<section class="section">
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-6">
@@ -275,7 +494,8 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
+
 
 <footer class="section-sm bg-tertiary">
 	<div class="container">
