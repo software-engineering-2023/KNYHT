@@ -128,18 +128,29 @@
     </div>
   </div>
 </div>
-
+<style>
+	input[type="text"],
+	input[type="number"],
+	select {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+</style>
 <section class="page-header bg-tertiary">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Personal loans</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Bill Payment</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="home.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="service-details.html">Personal Loans</a>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardBill.html">Credit Card Bill Payment</a>
 					</li>
 				</ul>
 			</div>
@@ -195,65 +206,68 @@
 <section class="section-sm">
 	<div class="container">
 		<div class="row g-5">
-			<div class="col-lg-4 mb-5 mb-lg-0">
-				<div class="bg-white shadow rounded-lg p-4 sticky-top" style="top: 30px;">
-					<h4 class="has-line-end">Personal loans</h4>
-					<nav id="TableOfContents">
-						<ul>
-							<li><a href="#how-a-payday-loan-online-works">How a Payday Loan Online Works</a>
-								<ul>
-									<li><a href="#payday-loan-application-processing">Payday Loan Application
-											Processing</a>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#what-you-know-about-loans">What You Know About Loans</a>
-							</li>
-							<li><a href="#what-services-we-render">What Services We Render</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="col-lg-8">
-				<div class="content">
-					<h2 id="how-a-payday-loan-online-works">How a Payday Loan Online Works</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at eu purus eleme nergtum. Nisl
-						turpis consectetur amet, nam arcu at dolor. Nunc, etiam pellentesque facilisis elementum nisl.
-						Id scelerisque gravida augue senectus dolor nascetur. Aliquet quam ut eget aliquam ultricr
-						geries volutpat. Enim condimentum quisque at mauris malesuada. Phasellus sed elemee rgerntdsum
-						in bibendum morbi id phasellus arcu. Tempus, venenatis sagittis volutpat egestas. Sceler
-						egerisque</p>
-					<p>pellentesque ut varius gravida aliquet et. Bibendum viverra dictum leo iaculis convallis lacus,
-						parturient amet ut. Mi et hendrerit sit massa faucibus sed rhoncus. Faucibus dolor in quis
-						sapien, faucibus sem et. Sagittis nam eu, lorem nam morbi euismod amet et. Non lectus nibh quis
-						et leo Elementum non pharetra leo ipsum morbi euismod mus. Amet adipiscing est mauris non
-						dictum. At elementum, fermentum quam odio eros sem. Morbi mattis eu dictum malesuada. Tellus in.
-					</p>
-					<h3 id="payday-loan-application-processing">Payday Loan Application Processing</h3>
-					<ul>
-						<li>Interest may vary, be fixed, or mixed, will on the lender&rsquo;s and characteristics</li>
-						<li>Depending on the granting institution and the amount of the loan, goods</li>
-						<li>The loan can be granted to anyone, as long as they make the loan application</li>
-					</ul>
-					<hr>
-					<h2 id="what-you-know-about-loans">What You Know About Loans</h2>
-					<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-						<iframe src="https://www.youtube.com/embed/jgAsPXRhTLQ"
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-							allowfullscreen title="YouTube Video"></iframe>
-					</div>
-					<hr>
-					<h2 id="what-services-we-render">What Services We Render</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices accumsan ultricies morbi purus
-						dui pharetra, diam congue. Facilisi sapien eros, a sagittis, at quam dolor elit. Malesuada
-						elementum leo, ac volud rhtpat integer. Amet, dolor risus lectus platea lectus faucibus mi,
-						dictum. Ultricies</p>
-					<p>cursus. Diam risus mauris id pretium vel. Ac amet netus imperdiet scel eerghp iejroin ris tque
-						elit id sapien.habitant commodo enm at duiaAt consequat facilisi aenean consectetur dolor cursus
-						at a. Risus auctor amet, iaculis sed mi arcu ante. Sit etiam semper non, nunc gravida volutpat
-					</p>
-				</div>
+			<div style="text-align:center">
+				<div class="modal-body">
+					<form>
+					  <div class="row">
+                        <h2 style="text-align: left;">Source Account Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="sourceCardNumber" class="form-label">Source Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="sourceCardNumber" placeholder="ex: 374xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="expiry-date" class="form-label">Expiry Date</label>
+							  <input type="text" class="form-control shadow-none" id="expiry-date" placeholder="ex: 05/2026" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="CVV" class="form-label">CVV</label>
+							  <input type="text" class="form-control shadow-none" id="CVV" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Credit Card Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcardNumber" class="form-label">Credit Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="creditcardNumber" placeholder="ex: 435xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Payment</h2>
+						<div class="mb-4 pb-2">
+						  <div class="form-group">
+							<label for="amount" class="form-label">Amount</label>
+							<input type="number" class="form-control shadow-none" id="amount" placeholder="ex: 25000" required="required">
+						  </div>
+						</div>
+                        <hr>
+                        <div class="mb-4 ">
+                            <div class="form-group">
+                                <label for="cars">Payment Type</label>
+                                    <select name="payment" id="paymentType" >
+                                    <option value="one time payment">One Time Payment</option>
+                                    <option value="recurring">Recurring</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <hr>
+						<div class="col-lg-12">
+						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="payBill()">Pay</button>
+						  <script>
+                            function payBill(event){
+								event.preventDefault();
+								window.location.href= "creditcardBill.html";
+							}
+                          </script>
+						</div>
+					  </div>
+					</form>
+				  </div>
 			</div>
 		</div>
 	</div>
