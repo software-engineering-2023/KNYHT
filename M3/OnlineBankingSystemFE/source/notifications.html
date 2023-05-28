@@ -1,6 +1,261 @@
 @@include('_header.htm')
+<section>
+<div class="row notification-container">
+	<h2 class="text-center">My Notifications</h2>
+	<p class="dismiss text-right"><a id="dismiss-all" href="#">Dimiss All</a></p>
+	<div class="card notification-card notification-invitation">
+	  <div class="card-body">
+		<table>
+		  <tr>
+			<td style="width:70%"><div class="card-title">transaction #451 done successfully to '<b>Amazon</b> 'group</div></td>
+			<td style="width:30%">
+  
+			  <a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			</td>
+		  </tr>
 
-<section class="page-header bg-tertiary">
+		</table> 
+	  </div>
+	</div>
+	<div class="card notification-card notification-reminder">
+		<div class="card-body">
+		   <table>
+			<tr>
+			  <td style="width:70%"><div class="card-title">Hey peter, we’re sending out a reminder about a scheduled payment for $5670 that will be due by [12/6/2023]</div></td>
+			  <td style="width:30%">
+		</a>
+				<a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			  </td>
+			</tr>
+		  </table>
+		</div>
+	  </div>
+	
+	<div class="card notification-card notification-warning">
+	  <div class="card-body">
+		 <table>
+		  <tr>
+			<td style="width:70%"><div class="card-title">Your expenses for '<b>Groceries</b>' has exceeded its budget</div></td>
+			<td style="width:30%">
+		</a>
+			  <a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+	
+	<div class="card notification-card notification-danger">
+	  <div class="card-body">
+		 <table>
+		  <tr>
+			<td style="width:70%"><div class="card-title">Insufficient budget to create '<b>Clothing</b>' budget category</div></td>
+			<td style="width:30%">
+			  </a>
+			  <a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+	
+	<div class="card notification-card notification-reminder">
+	  <div class="card-body">
+		 <table>
+		  <tr>
+			<td style="width:70%"><div class="card-title">You have <b>2</b> upcoming payment(s) this week</div></td>
+			<td style="width:30%">
+	  </a>
+			  <a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+	<div class="card notification-card notification-invitation">
+		<div class="card-body">
+		  <table>
+			<tr>
+			  <td style="width:70%"><div class="card-title">James your new loan has been approved for £3000 and will be in your account within the next 3 days.
+				Thank you for using KNYHT bank.</div></td>
+			  <td style="width:30%">
+	
+				<a href="#" class="btn btn-danger dismiss-notification">Dismiss</a>
+			  </td>
+			</tr>
+		  </table>
+		</div>
+	  </div>
+	
+	
+	
+  </div>
+<style>
+body{
+  background-color: #fcfcfc;
+}
+
+.row{
+  margin:auto;
+  padding: 30px;
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  .card{
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    transition: opacity 0.3s;
+  }
+}
+
+
+.card-body{
+  padding: 0.5rem;
+  .table{
+    width: 100%;
+    .tr{
+      display:flex;
+      .td{
+        .a.btn{
+          font-size: 0.8rem;
+          padding: 3px;
+        }
+      }
+      .td:nth-child(2){
+        text-align:right;
+        justify-content: space-around;
+      }
+    }
+  }
+  
+}
+
+.card-title:before{
+  display:inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight:900;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+.notification-invitation {
+  .card-body {
+    .card-title:before {
+      color: #90CAF9;
+      border-color: #90CAF9;
+      content: "\f007";
+    }
+  }
+}
+
+.notification-warning {
+  .card-body {
+    .card-title:before {
+      color: #FFE082;
+      border-color: #FFE082;
+      content: "\f071";
+    }
+  }
+}
+
+.notification-danger {
+  .card-body {
+    .card-title:before {
+      color: #FFAB91;
+      border-color: #FFAB91;
+      content: "\f00d";
+    }
+  }
+}
+
+.notification-reminder {
+  .card-body {
+    .card-title:before {
+      color: #CE93D8;
+      border-color: #CE93D8;
+      content: "\f017";
+    }
+  }
+}
+
+.card.display-none{
+  display: none;
+  transition: opacity 2s;
+}
+/*HTML 
+<button class="button-88" role="button">Button 88</button>
+
+/* CSS */
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+
+
+ </style>
+ <script>
+const dismissAll = document.getElementById('dismiss-all');
+
+const dismissBtns = Array.from(document.querySelectorAll('.dismiss-notification'));
+
+
+const notificationCards = document.querySelectorAll('.notification-card');
+
+dismissBtns.forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault;
+    var parent = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    parent.classList.add('display-none');
+	
+  })
+});
+
+dismissAll.addEventListener('click', function(e){
+  e.preventDefault;
+  notificationCards.forEach(card => {
+    card.classList.add('display-none');
+  });
+  const row = document.querySelector('.notification-container');
+  const message = document.createElement('h4');
+  message.classList.add('text-center');
+  message.innerHTML = 'All caught up!';
+  row.appendChild(message);
+})
+
+ </script>
+ </section>
+<!--<section class="page-header bg-tertiary">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
@@ -311,6 +566,6 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
-@@include('_footer.htm')
+<!--@@include('_footer.htm')-->

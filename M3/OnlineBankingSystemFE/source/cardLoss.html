@@ -2,7 +2,7 @@
 
 <div class="section">
   <div class="container">
-    <div class="row justify-content-center">
+    <!--<div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="mb-5">
           <h2 class="mb-4" style="line-height:1.5">Card Loss</h2>
@@ -217,8 +217,40 @@
           </div>
         </div>
       </div>
+    </div>-->
+    <div class="container">
+      <h2>Report Card Loss</h2>
+      <form id="card-loss-form">
+        
+        <div class="form-group mb-4 pb-2">
+          <label for="card-number">Card Number:</label>
+         
+          <input type="text" class="form-control shadow-none" id="card-number" name="card-number" required>
+        </div>
+        <div class="form-group mb-4 pb-2">
+          <label for="name">Name:</label>
+          <input type="text"  class="form-control shadow-none" id="name" name="name" required>
+        </div>
+        <div class="form-group mb-4 pb-2">
+          <label for="date-lost">Date of Losing Card:</label>
+        </div>
+        <div class="form-group mb-4 pb-2">
+         <!---- <label for="date-lost">Date of Losing Card:</label>-->
+          <input type="date" id="date-picker" class="btn btn-primary w-5">
+        </div>
+        <div class="form-group mb-4 pb-2">
+          <label for="exampleFormControlInput1" class="form-label">Reason</label>
+          <input type="text" class="form-control shadow-none" id="reason">
+        </div>
+        <div class="form-group mb-4 pb-2">
+          <button  onclick="addTodo()" class="btn btn-primary w-5" type="submit">send</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
+<style>
+  
+</style>
 
 @@include('_footer.htm')
