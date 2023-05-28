@@ -1,5 +1,4 @@
 @@include('_header.htm')
-
 <style>
 	input[type="text"],
 	input[type="number"],
@@ -10,58 +9,24 @@
 		box-sizing: border-box;
 	}
 </style>
-
 <section class="page-header bg-tertiary">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Loan Application</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Bill Payment</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="home.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="LoanApplication.html">Loan Application</a>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardBill.html">Credit Card Bill Payment</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<section class="section loan-steps bg-tertiary">
-		
-			<div class="row justify-content-center align-items-center">
-				<div class="col-lg-7">
-					<div class="section-title text-center">
-						<p class="text-primary text-uppercase fw-bold mb-3">Apply Loan</p>
-						<h1>Applying For A Loan Is Very Easy In Just 3 Easy Steps</h1>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="row justify-content-center">
-						<div class="step-item col-lg-4 col-md-6">
-							<div class="text-center">
-								<p class="count">01</p>
-								<h3 class="mb-3">Fill Out The Form</h3>
-							</div>
-						</div>
-						<div class="step-item col-lg-4 col-md-6">
-							<div class="text-center">
-								<p class="count">02</p>
-								<h3 class="mb-3">Data verification</h3>
-							</div>
-						</div>
-						<div class="step-item col-lg-4 col-md-6">
-							<div class="text-center">
-								<p class="count">03</p>
-								<h3 class="mb-3">Get your money</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-	</section>
 	<div class="has-shapes">
 		<svg class="shape shape-left text-light" viewBox="0 0 192 752" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
@@ -108,94 +73,68 @@
 		</svg>
 	</div>
 </section>
+
 <section class="section-sm">
-	<h1 class="mb-3 text-capitalize" style="text-align: center;">Form</h1>
 	<div class="container">
 		<div class="row g-5">
 			<div style="text-align:center">
 				<div class="modal-body">
 					<form>
 					  <div class="row">
+                        <h2 style="text-align: left;">Source Account Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="sourceCardNumber" class="form-label">Source Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="sourceCardNumber" placeholder="ex: 374xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="expiry-date" class="form-label">Expiry Date</label>
+							  <input type="text" class="form-control shadow-none" id="expiry-date" placeholder="ex: 05/2026" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="CVV" class="form-label">CVV</label>
+							  <input type="text" class="form-control shadow-none" id="CVV" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Credit Card Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcardNumber" class="form-label">Credit Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="creditcardNumber" placeholder="ex: 435xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Payment</h2>
+						<div class="mb-4 pb-2">
+						  <div class="form-group">
+							<label for="amount" class="form-label">Amount</label>
+							<input type="number" class="form-control shadow-none" id="amount" placeholder="ex: 25000" required="required">
+						  </div>
+						</div>
                         <hr>
                         <div class="mb-4 ">
                             <div class="form-group">
-                                <label for="cars">Loan Type</label>
-                                    <select name="loan type" id="loanType" >
-                                    <option value="Personal">Personal</option>
-                                    <option value="Car">Car</option>
+                                <label for="cars">Payment Type</label>
+                                    <select name="payment" id="paymentType" >
+                                    <option value="one time payment">One Time Payment</option>
+                                    <option value="recurring">Recurring</option>
                                     </select>
                             </div>
                         </div>
                         <hr>
-						<div class="col-lg-6 mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_first_name" class="form-label">First Name</label>
-							  <input type="text" class="form-control shadow-none" id="loan_first_name" required="required">
-							</div>
-						</div>
-						<div class="col-lg-6 mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_last_name" class="form-label">Last Name</label>
-							  <input type="text" class="form-control shadow-none" id="loan_last_name" required="required">
-							</div>
-						</div>
-						<div class="mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_national_id" class="form-label">National ID</label>
-							  <input type="text" class="form-control shadow-none" id="loan_national_id" required="required">
-							</div>
-						</div>
-						<div class="mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_email_address" class="form-label">Email Address</label>
-							  <input type="email" class="form-control shadow-none" id="loan_email_address" required="required">
-							</div>
-						</div>
-						<div class="col-lg-6 mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_address" class="form-label">Address</label>
-							  <input type="text" class="form-control shadow-none" id="loan_address" required="required">
-							</div>
-						</div>
-						<div class="col-lg-6 mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_city" class="form-label">City</label>
-							  <input type="text" class="form-control shadow-none" id="loan_city" required="required">
-							</div>
-						</div>
-						<div class="mb-4 pb-2">
-							<div class="form-group">
-							  <label for="loan_job_title" class="form-label">Job Title</label>
-							  <input type="text" class="form-control shadow-none" id="loan_job_title" required="required">
-							</div>
-						</div>
-						<div class="mb-4 pb-2">
-						  <div class="form-group">
-							<label for="loan_income" class="form-label">Monthly Income</label>
-							<input type="number" class="form-control shadow-none" id="loan_income" placeholder="ex: 25000" required="required">
-						  </div>
-						</div>
-                        <div class="mb-4 pb-2">
-                            <div class="form-group">
-                              <label for="loan_amount" class="form-label">Requested Loan Amount</label>
-                              <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 25000" required="required">
-                            </div>
-                          </div>
-						<div class="col-lg-6 mb-4 pb-2">
-							<label class="mr-4">Upload your National ID:</label>
-							<input type="file" name="file" required="required">
-						</div>
-						<div class="mb-4">
-							<input type="checkbox" required="required"> I agree to <a href="https://policies.google.com/privacy"> Privacy Policy</a> and all <a href="https://policies.google.com/terms">Terms and Conditions</a></label><br>
-						</div>
 						<div class="col-lg-12">
-						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="submitLoanForm()">Submit</button>
+						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="payBill()">Pay</button>
 						  <script>
-							function submitLoanForm(event){
+                            function payBill(event){
 								event.preventDefault();
-								window.location.href= "LoanApplication.html";
+								window.location.href= "creditcardBill.html";
 							}
-						  </script>
+                          </script>
 						</div>
 					  </div>
 					</form>
