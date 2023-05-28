@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -5,3 +7,519 @@
  // GITHUB: https://github.com/themefisher/
 -->
 
+<html>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>KNYHT - Online Banking System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta name="description" content="This is meta description">
+	<meta name="author" content="Themefisher">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+	<!-- theme meta -->
+	<meta name="theme-name" content="wallet" />
+
+	<!-- # Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- # CSS Plugins -->
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+	<link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+	<link rel="stylesheet" href="plugins/font-awesome/brands.css">
+	<link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+	<!-- # Main Style Sheet -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- navigation -->
+<header class="navigation bg-tertiary">
+  <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.jpg" alt="Wallet">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"> <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="account.html">Account</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="notifications.html">Notifications</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="reminders.html">Reminders</a>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Report</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item " href="cardLoss.html">Card Loss</a>
+              </li>
+              <li><a class="dropdown-item " href="technicalIssue.html">Technical Issue</a>
+              </li>
+              <li><a class="dropdown-item " href="faq.html">FAQ&#39;s</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- /navigation -->
+
+<div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title" id="exampleModalLabel">How much do you need?</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#!" method="post">
+          <div class="row">
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_amount" class="form-label">Amount</label>
+                <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 25000">
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_how_long_for" class="form-label">How long for?</label>
+                <input type="number" class="form-control shadow-none" id="loan_how_long_for" placeholder="ex: 12">
+              </div>
+            </div>
+            <div class="col-lg-12 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_repayment" class="form-label">Repayment</label>
+                <input type="number" class="form-control shadow-none" id="loan_repayment" disabled>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control shadow-none" id="loan_full_name">
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4 pb-2">
+              <div class="form-group">
+                <label for="loan_email_address" class="form-label">Email address</label>
+                <input type="email" class="form-control shadow-none" id="loan_email_address">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <button type="submit" class="btn btn-primary w-100">Get Your Loan Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<head>
+    <title>Bank Money Transfer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+
+        .money-transfer-icon {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .Transfercontainer {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            display: none;
+        }
+
+        .popup h2 {
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Transfercontainer">
+        <h1><img class="money-transfer-icon" src="images/money-transfer-icon.png" alt="Money Transfer">Money Transfer
+        </h1>
+        <form id="transferForm" onsubmit="transferMoney(event)">
+            <div class="form-group">
+                <label for="transferType">Transfer Type:</label>
+                <select id="transferType" onchange="showTransferDetails()">
+                    <option value="internal" selected>Internal</option>
+                    <option value="domestic">Domestic</option>
+                    <option value="international">International</option>
+                </select>
+            </div>
+            <div id="transferDetails">
+                <div class="form-group">
+                    <label for="sender">Sender:</label>
+                    <input type="text" id="sender" placeholder="Enter sender's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipient">Recipient:</label>
+                    <input type="text" id="recipient" placeholder="Enter recipient's name" required>
+                </div>
+                <div id="accountNumberDetails">
+                    <div class="form-group">
+                        <label for="accountNumber">Recipient Account Number:</label>
+                        <input type="text" id="accountNumber" placeholder="Enter recipient's account number" required>
+                    </div>
+                </div>
+                <div id="bankNameDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="bankName">Recipient Bank Name:</label>
+                        <input type="text" id="bankName" placeholder="Enter recipient's bank name">
+                    </div>
+                </div>
+                <div id="addressDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="address">Recipient's Address:</label>
+                        <input type="text" id="address" placeholder="Enter recipient's address">
+                    </div>
+                </div>
+                <div id="recipientBankNameDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="recipientBankName">Recipient's Bank Name:</label>
+                        <input type="text" id="recipientBankName" placeholder="Enter recipient's bank name">
+                    </div>
+                </div>
+                <div id="recipientBankAddressDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="recipientBankAddress">Recipient's Bank Address:</label>
+                        <input type="text" id="recipientBankAddress" placeholder="Enter recipient's bank address">
+                    </div>
+                </div>
+                <div id="swiftBicDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="swiftBic">Recipient Bank's BIC (Bank Identifier Code):</label>
+                        <input type="text" id="swiftBic" placeholder="Enter recipient bank's BIC ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount to Transfer:</label>
+                    <input type="number" id="amount" placeholder="Enter transfer amount" required>
+                </div>
+            </div>
+            <button type="submit">Transfer</button>
+        </form>
+        <div class="result" id="result"></div>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <h2>Transfer Successful!</h2>
+            <h5>Details:</h5>
+            <div id="receiptDetails"></div>
+            <br>
+            <button onclick="redirectToTransferPage()">Ok</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            showTransferDetails(); // Show transfer details based on the initial transfer type
+        };
+
+        function showTransferDetails() {
+            var transferType = document.getElementById("transferType").value;
+            var transferDetails = document.getElementById("transferDetails");
+            var accountNumberDetails = document.getElementById("accountNumberDetails");
+            var bankNameDetails = document.getElementById("bankNameDetails");
+            var addressDetails = document.getElementById("addressDetails");
+            var recipientBankNameDetails = document.getElementById("recipientBankNameDetails");
+            var recipientBankAddressDetails = document.getElementById("recipientBankAddressDetails");
+            var swiftBicDetails = document.getElementById("swiftBicDetails");
+
+            if (transferType === "internal") {
+                transferDetails.style.display = "block";
+                accountNumberDetails.style.display = "block";
+                bankNameDetails.style.display = "none";
+                addressDetails.style.display = "none";
+                recipientBankNameDetails.style.display = "none";
+                recipientBankAddressDetails.style.display = "none";
+                swiftBicDetails.style.display = "none";
+            } else if (transferType === "domestic") {
+                transferDetails.style.display = "block";
+                accountNumberDetails.style.display = "block";
+                bankNameDetails.style.display = "block";
+                addressDetails.style.display = "none";
+                recipientBankNameDetails.style.display = "none";
+                recipientBankAddressDetails.style.display = "none";
+                swiftBicDetails.style.display = "none";
+            } else if (transferType === "international") {
+                transferDetails.style.display = "block";
+                accountNumberDetails.style.display = "block";
+                bankNameDetails.style.display = "none";
+                addressDetails.style.display = "block";
+                recipientBankNameDetails.style.display = "block";
+                recipientBankAddressDetails.style.display = "block";
+                swiftBicDetails.style.display = "block";
+            } else {
+                transferDetails.style.display = "none";
+                accountNumberDetails.style.display = "none";
+                bankNameDetails.style.display = "none";
+                addressDetails.style.display = "none";
+                recipientBankNameDetails.style.display = "none";
+                recipientBankAddressDetails.style.display = "none";
+                swiftBicDetails.style.display = "none";
+            }
+        }
+
+        function transferMoney(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var sender = document.getElementById("sender").value;
+            var recipient = document.getElementById("recipient").value;
+            var accountNumber = document.getElementById("accountNumber").value;
+            var amount = document.getElementById("amount").value;
+            var transferType = document.getElementById("transferType").value;
+
+            var transferDetails = "Money transferred from " + sender + " to " + recipient + ".";
+
+            if (transferType === "internal") {
+                transferDetails += "<br>Sender Name: " + sender;
+                transferDetails += "<br>Recipient Name: " + recipient;
+                transferDetails += "<br>Recipient Account Number: " + accountNumber;
+            } else if (transferType === "domestic") {
+                var bankName = document.getElementById("bankName").value;
+                transferDetails += "<br>Sender Name: " + sender;
+                transferDetails += "<br>Recipient Name: " + recipient;
+                transferDetails += "<br>Recipient Account Number: " + accountNumber;
+                transferDetails += "<br>Recipient Bank Name: " + bankName;
+            } else if (transferType === "international") {
+                var address = document.getElementById("address").value;
+                var recipientBankName = document.getElementById("recipientBankName").value;
+                var recipientBankAddress = document.getElementById("recipientBankAddress").value;
+                var swiftBic = document.getElementById("swiftBic").value;
+
+                transferDetails += "<br>Sender Name: " + sender;
+                transferDetails += "<br>Recipient Name: " + recipient;
+                transferDetails += "<br>Recipient Account Number: " + accountNumber;
+                transferDetails += "<br>Recipient Address: " + address;
+                transferDetails += "<br>Recipient Bank Name: " + recipientBankName;
+                transferDetails += "<br>Recipient Bank Address: " + recipientBankAddress;
+                transferDetails += "<br>Recipient Bank's SWIFT or BIC Code: " + swiftBic;
+            }
+
+            transferDetails += "<br>Transfer Amount: " + amount;
+
+            document.getElementById("receiptDetails").innerHTML = transferDetails;
+
+            // Show the receipt popup
+            var overlay = document.getElementById("overlay");
+            var popup = document.getElementById("popup");
+            overlay.style.display = "block";
+            popup.style.display = "block";
+        }
+
+        function redirectToTransferPage() {
+            // Refresh the page to reset the form
+            location.reload();
+        }
+    </script>
+</body>
+
+<footer class="section-sm bg-tertiary">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="openAccount.html">Open Bank Account</a>
+						</li>
+						<li class="mb-2"><a href="payBill.html">Pay Bill</a>
+						</li>
+						<li class="mb-2"><a href="creditcard.html">Credit Card</a>
+						</li>
+						<li class="mb-2"><a href="LoanApplication.html">Loan</a>
+						</li>
+						<li class="mb-2"><a href="transferMoney.html">Transfer Money</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">About</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="#!">Benefits</a>
+						</li>
+						<li class="mb-2"><a href="#!">Careers</a>
+						</li>
+						<li class="mb-2"><a href="#!">Our Story</a>
+						</li>
+						<li class="mb-2"><a href="#!">Team</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-6 mb-4">
+				<div class="footer-widget">
+					<h5 class="mb-4 text-primary font-secondary">Help</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="technicalIssue.html">Contact Us</a>
+						</li>
+						<li class="mb-2"><a href="faq.html">FAQs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-12 newsletter-form">
+				<div style="background-color: #F4F4F4; padding: 35px;">
+					<h5 class="mb-4 text-primary font-secondary">Subscribe</h5>
+					<div class="pe-0 pe-xl-5">
+						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control shadow-none bg-white border-end-0"
+									placeholder="Email address"> <span class="input-group-text border-0 p-0">
+									<button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
+										aria-label="Subscribe for Newsletter"><i
+											class="fas fa-arrow-right"></i></button>
+								</span>
+							</div>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+								<input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row align-items-center mt-5 text-center text-md-start">
+			<div class="col-lg-4">
+				<a href="home.html">
+					<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.jpg"
+						alt="Wallet">
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+				<ul class="list-unstyled list-inline mb-0 text-lg-center">
+					<li class="list-inline-item me-4"><a class="text-black"
+							href="https://policies.google.com/privacy">Privacy
+							Policy</a>
+					</li>
+					<li class="list-inline-item me-4"><a class="text-black"
+							href="https://policies.google.com/terms">Terms &amp; Conditions</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
+				<ul class="list-unstyled list-inline mb-0 social-icons">
+					<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black"
+							href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black"
+							href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black"
+							href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<!-- # JS Plugins -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+</html>
