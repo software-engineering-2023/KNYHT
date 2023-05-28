@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 @@include('_headerAdmin.htm')
 <style>
-button{
+  button {
     color: white;
     background-color: green;
-}
-label{
+  }
+
+  label {
     color: black;
     padding: 12px;
 
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  }
 
-th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-  color: white;
-  background-color: black;
-  
-}
-td {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-  color: black;
-  
-}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    background-color: black;
+
+  }
+
+  td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    color: black;
+
+  }
 
 
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-  color: black;
-}
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    color: black;
+  }
 </style>
 
 <body>
 
-    <h2>Create banker account</h2>
+  <h2>Create banker account</h2>
 
 
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value=" "><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value=" "><br>
-     <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email" value=" "><br>
-     <label for="mobilenumber">Mobile Number:</label><br>
-    <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
-   
-  </form> 
-  
-  <button type="button" onclick="alert('Account created successfully!')">Submit</button>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=" "><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=" "><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" value=" "><br>
+  <label for="mobilenumber">Mobile Number:</label><br>
+  <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
+
+  </form>
+
+  <button type="button" onclick="createBankerAccount()">Submit</button>
+  <script>
+    function createBankerAccount() {
+      alert('Account created successfully!');
+      window.location.href = "bankeraccount.html";
+    }
+  </script>
 
 </body>
