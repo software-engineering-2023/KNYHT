@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+@@include('_headerAdmin&Banker.htm')
+<style>
+button{
+    color: white;
+    background-color: green;
+}
+
+label{
+    color: black;
+    padding: 12px;
+
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  background-color: black;
+  
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color: black;
+  
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  color: black;
+}
+</style>
+
+<body>
+
+    <h2>Create client account</h2>
+
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value=" "><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value=" "><br>
+    <label for="amount">Amount:</label><br>
+    <input type="text" id="amount" name="amount" value=" "><br>
+     <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" value=" "><br>
+     <label for="mobilenumber">Mobile Number:</label><br>
+    <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
+   
+  </form> 
+  
+  <button type="button" onclick="alert('Account created successfully!')">Submit</button>
+
+</body>

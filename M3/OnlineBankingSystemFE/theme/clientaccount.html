@@ -78,19 +78,29 @@
   
   
 <style>
+button{
+    color: white;
+    background-color: green;
+}
+
+label{
+    color: black;
+    padding: 12px;
+
+}
+
+
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-}
-input{
-  color: white;
-  background-color: green;
+  color: black;
 }
 
 th {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
   color: white;
   background-color: black;
@@ -98,7 +108,7 @@ th {
 }
 td {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
   color: black;
   
@@ -108,118 +118,28 @@ td {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+  color: black;
 }
 </style>
 
 <body>
 
-<h2>Credit Card Applications</h2>
+    <h2>Create client account</h2>
 
-<table id="creditcardtable">
-  <tr>
-    <th>Account Number</th>
-    <th>Client Name</th>
-    <th>Mobile Number</th>
-    <th>Email</th>
-    <th>Status</th>
-    <th></th>
-    
-    
-    
-    
-  </tr>
-  <tr>
-    <td>003425276890</td>
-    <td>Francisco Chang</td>
-    <td>01034256789</td>
-    <td>fran.chang@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      
-        </td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-      <br><br>
-    </form></td>
-  </tr>
-  <tr>
-    <td>456372689005</td>
-    <td>Roland Mendel</td>
-    <td>01111675439</td>
-    <td>roland@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>567443338790</td>
-    <td>Helen Bennett</td>
-    <td>01087654534</td>
-    <td>helen.ben@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>344455332911</td>
-    <td>Yoshi Tannamuri</td>
-    <td>01034232396</td>
-    <td>yoshi@yahoo.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>993322432111</td>
-    <td>Maria Anders</td>
-    <td>011345678910</td>
-    <td>maria.anders@yahoo.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value=" "><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value=" "><br>
+    <label for="amount">Amount:</label><br>
+    <input type="text" id="amount" name="amount" value=" "><br>
+     <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" value=" "><br>
+     <label for="mobilenumber">Mobile Number:</label><br>
+    <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
+   
+  </form> 
   
+  <button type="button" onclick="alert('Account created successfully!')">Submit</button>
 
-</table>
-<script>
-  function deleteRow(r) {
-    var i = r.parentNode.parentNode.rowIndex;
-    document.getElementById("creditcardtable").deleteRow(i);
-  }
-  </script>
 </body>
-
-
-

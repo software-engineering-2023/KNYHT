@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-@@include('_headerAdmin&Banker.htm')
+@@include('_headerAdmin.htm')
 <style>
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-}
-input{
-  color: white;
-  background-color: green;
 }
 
 th {
@@ -32,54 +28,49 @@ td {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+input{
+  color: white;
+  background-color: green;
+}
 </style>
 
 <body>
 
-<h2>Credit Card Applications</h2>
+<h2>Technical Issues</h2>
 
-<table id="creditcardtable">
+<table id="techtable">
   <tr>
     <th>Account Number</th>
-    <th>Client Name</th>
-    <th>Mobile Number</th>
-    <th>Email</th>
+    <th>Issue</th>
     <th>Status</th>
     <th></th>
-    
     
     
     
   </tr>
   <tr>
     <td>003425276890</td>
-    <td>Francisco Chang</td>
-    <td>01034256789</td>
-    <td>fran.chang@gmail.com</td>
+    <td>Can not redeem credit card points</td>
     <td><form>
       <label for="status"></label>
       <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
+        <option value="unhandled">Unhandled</option>
+        <option value="handled">Handled</option>
       </select>
       
         </td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
       <br><br>
     </form></td>
+    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
   </tr>
   <tr>
     <td>456372689005</td>
-    <td>Roland Mendel</td>
-    <td>01111675439</td>
-    <td>roland@gmail.com</td>
+    <td>Did not receive reminders for telephone payment</td>
     <td><form>
       <label for="status"></label>
       <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
+        <option value="unhandled">Unhandled</option>
+        <option value="handled">Handled</option>
       </select>
       <br><br>
     </form></td>
@@ -87,15 +78,12 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>567443338790</td>
-    <td>Helen Bennett</td>
-    <td>01087654534</td>
-    <td>helen.ben@gmail.com</td>
+    <td>Did not receive reminders for credit card payments</td>
     <td><form>
       <label for="status"></label>
       <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
+        <option value="unhandled">Unhandled</option>
+        <option value="handled">Handled</option>
       </select>
       <br><br>
     </form></td>
@@ -103,15 +91,12 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>344455332911</td>
-    <td>Yoshi Tannamuri</td>
-    <td>01034232396</td>
-    <td>yoshi@yahoo.com</td>
+    <td>Same transaction was done twice</td>
     <td><form>
       <label for="status"></label>
       <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
+        <option value="unhandled">Unhandled</option>
+        <option value="handled">Handled</option>
       </select>
       <br><br>
     </form></td>
@@ -119,15 +104,12 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>993322432111</td>
-    <td>Maria Anders</td>
-    <td>011345678910</td>
-    <td>maria.anders@yahoo.com</td>
+    <td>Can not view credit card points</td>
     <td><form>
       <label for="status"></label>
       <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
+        <option value="unhandled">Unhandled</option>
+        <option value="handled">Handled</option>
       </select>
       <br><br>
     </form></td>
@@ -139,10 +121,9 @@ tr:nth-child(even) {
 <script>
   function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
-    document.getElementById("creditcardtable").deleteRow(i);
+    document.getElementById("techtable").deleteRow(i);
   }
   </script>
 </body>
-
 
 
