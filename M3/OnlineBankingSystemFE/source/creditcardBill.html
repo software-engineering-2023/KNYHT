@@ -1,14 +1,27 @@
 @@include('_header.htm')
-
+<style>
+	input[type="text"],
+	input[type="number"],
+	select {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+</style>
 <section class="page-header bg-tertiary">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Our Services</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Bill Payment</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="home.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardBill.html">Credit Card Bill Payment</a>
 					</li>
 				</ul>
 			</div>
@@ -61,58 +74,71 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="section-sm">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-				<div class="rounded shadow py-5 px-4">
-					<div class="icon"> <i class="fas fa-user"></i>
-					</div>
-					<h3 class="mb-3">Personal loans</h3>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-					<a class="btn btn-sm btn-outline-primary" href="service-details.html">View Details <i
-							class="las la-arrow-right ms-1"></i></a>
-				</div>
-			</div>
-			<div class="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-				<div class="rounded shadow py-5 px-4">
-					<div class="icon"> <i class="fas fa-house-user"></i>
-					</div>
-					<h3 class="mb-3">Home Equity Loans</h3>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-					<a class="btn btn-sm btn-outline-primary" href="service-details.html">View Details <i
-							class="las la-arrow-right ms-1"></i></a>
-				</div>
-			</div>
-			<div class="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-				<div class="rounded shadow py-5 px-4">
-					<div class="icon"> <i class="fas fa-credit-card"></i>
-					</div>
-					<h3 class="mb-3">Credit Card</h3>
-					<p class="mb-4"> -Apply for a Credit Card <br>-View Points & Transcations <br> -Pay Credit Card Bill
-					</p> <a class="btn btn-sm btn-outline-primary" href="creditcard.html">View Details <i
-							class="las la-arrow-right ms-1"></i></a>
-				</div>
-			</div>
-			<div class="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-				<div class="rounded shadow py-5 px-4">
-					<div class="icon"> <i class="fas fa-money-check-alt"></i>
-					</div>
-					<h3 class="mb-3">Loans</h3>
-					<p class="mb-4">-Request a loan</p>
-					<a class="btn btn-sm btn-outline-primary" href="LoanApplication.html">View Details <i
-							class="las la-arrow-right ms-1"></i></a>
-				</div>
-			</div>
-			<div class="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-				<div class="rounded shadow py-5 px-4">
-					<div class="icon"> <i class="fas fa-money-check-alt"></i>
-					</div>
-					<h3 class="mb-3">Payday Loans</h3>
-					<p class="mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-					<a class="btn btn-sm btn-outline-primary" href="service-details.html">View Details <i
-							class="las la-arrow-right ms-1"></i></a>
-				</div>
+		<div class="row g-5">
+			<div style="text-align:center">
+				<div class="modal-body">
+					<form>
+					  <div class="row">
+                        <h2 style="text-align: left;">Source Account Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="sourceCardNumber" class="form-label">Source Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="sourceCardNumber" placeholder="ex: 374xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="expiry-date" class="form-label">Expiry Date</label>
+							  <input type="text" class="form-control shadow-none" id="expiry-date" placeholder="ex: 05/2026" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="CVV" class="form-label">CVV</label>
+							  <input type="text" class="form-control shadow-none" id="CVV" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Credit Card Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcardNumber" class="form-label">Credit Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="creditcardNumber" placeholder="ex: 435xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Payment</h2>
+						<div class="mb-4 pb-2">
+						  <div class="form-group">
+							<label for="amount" class="form-label">Amount</label>
+							<input type="number" class="form-control shadow-none" id="amount" placeholder="ex: 25000" required="required">
+						  </div>
+						</div>
+                        <hr>
+                        <div class="mb-4 ">
+                            <div class="form-group">
+                                <label for="cars">Payment Type</label>
+                                    <select name="payment" id="paymentType" >
+                                    <option value="one time payment">One Time Payment</option>
+                                    <option value="recurring">Recurring</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <hr>
+						<div class="col-lg-12">
+						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="payBill()">Pay</button>
+						  <script>
+                            function payBill(event){
+								event.preventDefault();
+								window.location.href= "creditcardBill.html";
+							}
+                          </script>
+						</div>
+					  </div>
+					</form>
+				  </div>
 			</div>
 		</div>
 	</div>

@@ -133,13 +133,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Credit Card</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Application Form</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="home.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardTypes.html">Credit Card Types</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardForm.html">Credit Card Application Form</a>
 					</li>
 				</ul>
 			</div>
@@ -195,60 +199,77 @@
 <section class="section-sm">
 	<div class="container">
 		<div class="row g-5">
-			<div class="col-lg-4 mb-5 mb-lg-0">
-				<div class="bg-white shadow rounded-lg p-4 sticky-top" style="top: 30px;">
-					<h4 class="has-line-end">Credit Card</h4>
-					<nav id="TableOfContents">
-						<ul>
-							<li><a href="#apply-credit-card">Apply For Credit Card</a>
-							</li>
-							<li><a href="#my-credit-card">My Credit Card</a>
-                                <ul>
-									<li><a href="#credit-card-points">My Points</a>
-									</li>
-								</ul>
-                                <ul>
-									<li><a href="#credit-card-transactions">My Transactions</a>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#pay-credit-card-bill">Pay Credit Card Bill</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="col-lg-8">
-				<div class="content">
-                    <img loading="lazy" decoding="async" src="images/creditcard.png" alt="credit card image" class="w-100">
-					<h2 id="apply-credit-card">Apply For Credit Card</h2>
-					<p>Now you can apply for a credit card online with KNYGHT Bank ! <br>
-                       <b>Steps :</b> <br> 1. Select the credit card type you want. <br> 2. Fill out the application form </p>
-                    <a class="btn btn-primary" href="creditcardTypes.html">Select Credit Card<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-					<hr>
-					<h2 id="my-credit-card">My Credit Card</h2>
-                    <h3 id="credit-card-points">My Points</h3>
-                    <p>Enjoy shopping and earn points on all kinds of transactions, and redeem them at one of our participating merchants in the biggest rewards network in Egypt.</p>
-					<p>View and redeem your credit card points as cashback through <b>My Points</b> page.</p>
-                    <a class="btn btn-primary" href="creditcardPoints.html">My Points<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-                    <hr>
-                    <h3 id="credit-card-transactions">My Transactions</h3>
-					<ul>
-						<p>View all your credit card transactions</p>
-                        <a class="btn btn-primary" href="creditcardTranscations.html">View Transactions<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-					</ul>
-					<hr>
-					<h2 id="pay-credit-card-bill">Pay Credit Card Bill</h2>
-					    <p>Pay your credit card bill online easily. <br> <b>All you have to do:</b>
-                            <br>
-                        1. Click on “Pay Now”. <br>
-                        2. Select the Account you want to pay from.<br>
-                        3. Select the Credit Card for which bill payment has to be done.<br>
-                        4. Enter Amount you wish to pay. <br>
-                        5. Click on Pay to make the payment. <br>
-                         </p>
-                        <a class="btn btn-primary" href="creditcardBill.html">Pay Now<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-				</div>
+			<div style="text-align:center">
+				<div class="modal-body">
+					<form>
+					  <div class="row">
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_full_name" class="form-label">Full Name</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_full_name"required="required">
+							</div>
+						</div>
+						<div class=" mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_phone_number" class="form-label">Phone Number</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_phone_number"required="required">
+							</div>
+						</div>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_nationalID" class="form-label">National ID</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_nationalID" required="required">
+							</div>
+						</div>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_email_address" class="form-label">Email Address</label>
+							  <input type="email" class="form-control shadow-none" id="creditcard_email_address" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_address" class="form-label">Address</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_address" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_city" class="form-label">City</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_city" required="required">
+							</div>
+						</div>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcard_jobTitle" class="form-label">Job Title</label>
+							  <input type="text" class="form-control shadow-none" id="creditcard_jobTitle" required="required">
+							</div>
+						</div>
+						<div class="mb-4 pb-2">
+						  <div class="form-group">
+							<label for="creditcard_income" class="form-label">Monthly Income</label>
+							<input type="number" class="form-control shadow-none" id="creditcard_income" placeholder="ex: 25000" required="required">
+						  </div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<label class="mr-4">Upload your National ID:</label>
+							<input type="file" name="file" required="required">
+						</div>
+						<div class="mb-4">
+							<input type="checkbox" required="required"> I agree to <a href="https://policies.google.com/privacy"> Privacy Policy</a> and all <a href="https://policies.google.com/terms">Terms and Conditions</a></label><br>
+						</div>
+						<div class="col-lg-12">
+						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="submitccForm()">Submit</button>
+						  <script>
+							function submitccForm(event){
+								event.preventDefault();
+								window.location.href= "creditcardForm.html";
+							}
+						  </script>
+						</div>
+					  </div>
+					</form>
+				  </div>
 			</div>
 		</div>
 	</div>

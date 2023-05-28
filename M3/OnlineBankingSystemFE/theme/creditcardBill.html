@@ -128,18 +128,29 @@
     </div>
   </div>
 </div>
-
+<style>
+	input[type="text"],
+	input[type="number"],
+	select {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+</style>
 <section class="page-header bg-tertiary">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Credit Card</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Bill Payment</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="home.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardBill.html">Credit Card Bill Payment</a>
 					</li>
 				</ul>
 			</div>
@@ -195,60 +206,68 @@
 <section class="section-sm">
 	<div class="container">
 		<div class="row g-5">
-			<div class="col-lg-4 mb-5 mb-lg-0">
-				<div class="bg-white shadow rounded-lg p-4 sticky-top" style="top: 30px;">
-					<h4 class="has-line-end">Credit Card</h4>
-					<nav id="TableOfContents">
-						<ul>
-							<li><a href="#apply-credit-card">Apply For Credit Card</a>
-							</li>
-							<li><a href="#my-credit-card">My Credit Card</a>
-                                <ul>
-									<li><a href="#credit-card-points">My Points</a>
-									</li>
-								</ul>
-                                <ul>
-									<li><a href="#credit-card-transactions">My Transactions</a>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#pay-credit-card-bill">Pay Credit Card Bill</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="col-lg-8">
-				<div class="content">
-                    <img loading="lazy" decoding="async" src="images/creditcard.png" alt="credit card image" class="w-100">
-					<h2 id="apply-credit-card">Apply For Credit Card</h2>
-					<p>Now you can apply for a credit card online with KNYGHT Bank ! <br>
-                       <b>Steps :</b> <br> 1. Select the credit card type you want. <br> 2. Fill out the application form </p>
-                    <a class="btn btn-primary" href="creditcardTypes.html">Select Credit Card<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-					<hr>
-					<h2 id="my-credit-card">My Credit Card</h2>
-                    <h3 id="credit-card-points">My Points</h3>
-                    <p>Enjoy shopping and earn points on all kinds of transactions, and redeem them at one of our participating merchants in the biggest rewards network in Egypt.</p>
-					<p>View and redeem your credit card points as cashback through <b>My Points</b> page.</p>
-                    <a class="btn btn-primary" href="creditcardPoints.html">My Points<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-                    <hr>
-                    <h3 id="credit-card-transactions">My Transactions</h3>
-					<ul>
-						<p>View all your credit card transactions</p>
-                        <a class="btn btn-primary" href="creditcardTranscations.html">View Transactions<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-					</ul>
-					<hr>
-					<h2 id="pay-credit-card-bill">Pay Credit Card Bill</h2>
-					    <p>Pay your credit card bill online easily. <br> <b>All you have to do:</b>
-                            <br>
-                        1. Click on “Pay Now”. <br>
-                        2. Select the Account you want to pay from.<br>
-                        3. Select the Credit Card for which bill payment has to be done.<br>
-                        4. Enter Amount you wish to pay. <br>
-                        5. Click on Pay to make the payment. <br>
-                         </p>
-                        <a class="btn btn-primary" href="creditcardBill.html">Pay Now<span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span> <i class="las la-arrow-right ms-1"></i></a>
-				</div>
+			<div style="text-align:center">
+				<div class="modal-body">
+					<form>
+					  <div class="row">
+                        <h2 style="text-align: left;">Source Account Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="sourceCardNumber" class="form-label">Source Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="sourceCardNumber" placeholder="ex: 374xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="expiry-date" class="form-label">Expiry Date</label>
+							  <input type="text" class="form-control shadow-none" id="expiry-date" placeholder="ex: 05/2026" required="required">
+							</div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+							  <label for="CVV" class="form-label">CVV</label>
+							  <input type="text" class="form-control shadow-none" id="CVV" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Credit Card Info </h2>
+						<div class="mb-4 pb-2">
+							<div class="form-group">
+							  <label for="creditcardNumber" class="form-label">Credit Card Number</label>
+							  <input type="text" class="form-control shadow-none" id="creditcardNumber" placeholder="ex: 435xxxxxxxxxx" required="required">
+							</div>
+						</div>
+                        <hr>
+                        <h2 style="text-align: left;">Payment</h2>
+						<div class="mb-4 pb-2">
+						  <div class="form-group">
+							<label for="amount" class="form-label">Amount</label>
+							<input type="number" class="form-control shadow-none" id="amount" placeholder="ex: 25000" required="required">
+						  </div>
+						</div>
+                        <hr>
+                        <div class="mb-4 ">
+                            <div class="form-group">
+                                <label for="cars">Payment Type</label>
+                                    <select name="payment" id="paymentType" >
+                                    <option value="one time payment">One Time Payment</option>
+                                    <option value="recurring">Recurring</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <hr>
+						<div class="col-lg-12">
+						  <button name="button" type="submit" class="btn btn-primary w-100" onclick="payBill()">Pay</button>
+						  <script>
+                            function payBill(event){
+								event.preventDefault();
+								window.location.href= "creditcardBill.html";
+							}
+                          </script>
+						</div>
+					  </div>
+					</form>
+				  </div>
 			</div>
 		</div>
 	</div>

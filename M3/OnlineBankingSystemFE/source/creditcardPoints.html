@@ -4,15 +4,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Credit Card Types</h2>
+				<h2 class="mb-3 text-capitalize">Credit Card Points</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="index.html">Home</a>
 					</li>
 					<li class="list-inline-item">/ &nbsp; <a href="services.html">Services</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
+                    <li class="list-inline-item">/ &nbsp; <a href="creditcard.html">Credit Card</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="creditcardTypes.html">Credit Card Types</a>
+					<li class="list-inline-item">/ &nbsp; <a href="creditcardPoints.html">Credit Card Points</a>
 					</li>
 				</ul>
 			</div>
@@ -42,34 +42,77 @@
 <section class="section-sm">
 	<div class="container">
 		<div class="row g-5">
-            <div class="row align-items-center justify-content-center service-item">
+				<div class="shadow rounded p-5 service-item" style="background-color: #51B56D;">
+					<div class="row">
+                        <div class="ps-lg-5 text-center">
+                            <img loading="lazy" decoding="async" src="images/confetti.png" alt="blue creditcard image"
+                                style="max-width: 100%;
+                                max-height: 100%;" class="w-100">
+                        </div>
+						<div class="col-8 mx-auto mb-3 text-center" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                            <h4 style="color: whitesmoke;">You have</h4> <br>
+							<h1 style="font-size: 100px; color:white"><b>20236</b></h1><br>
+                            <h4 style="color: whitesmoke;">Reward Points !</h4>
+						</div>  
+					</div>
+				</div>
+                <hr>
+                <div class="modal-body">
+					<form action="#!" method="post">
+					  <div class="row">
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+                                <label for="loan_amount" class="form-label">Number of Points to Redeem</label>
+                                <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 3000">
+                            </div>
+						</div>
+						<div class="col-lg-6 mb-4 pb-2">
+							<div class="form-group">
+                                <div class="col-lg-12">
+									<button name="button" value="redeem" type="button" class="btn btn-primary w-100" onclick="redeem()">Redeem</button>
+									<script>
+										function redeem(){
+											alert("Points Redeemed successfully!");
+											window.location.href= "creditcard.html";
+										}
+									  </script>
+                                  </div>
+							</div>
+						</div>			
+					  </div>
+					</form>
+				  </div>
+            </div>
+            <hr>
+			<p><br></p>
+			<h1 style="text-align: center;">Reward Points Uses</h1>
+			<p><br></p>
+			<div class="row align-items-center justify-content-center service-item">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="block text-center text-lg-start pe-0 pe-xl-5">
-                        <h1 class="text-capitalize mb-4">classic credit card</h1>
-                        <p class="mb-4">The most used card for cash withdrawal and purchases. Our Classic Credit Card is packed with offers for an amazing experience every day.
-                        </p> <a type="button" class="btn btn-primary" href="creditcardForm.html">Apply Now
-                             <span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+                        <h1 class="text-capitalize mb-4">Shopping</h1>
+                        <p class="mb-4">Enjoy your shopping experience without having to spend by redeeming your reward points!
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="ps-lg-5 text-center">
-                        <img loading="lazy" decoding="async" src="images/normal-creditcard.png" alt="credit card image"
+                        <img loading="lazy" decoding="async" src="images/shopping.jpg" alt="credit card image"
                             class="w-100">
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center justify-content-center service-item">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+			<p><br></p>
+			<div class="row align-items-center justify-content-center service-item">
+                <div class="col-lg-6 mb-5 mb-lg-0" >
                     <div class="block text-center text-lg-start pe-0 pe-xl-5">
-                        <h1 class="text-capitalize mb-4">Advanced Credit Card</h1>
-                        <p class="mb-4">Enjoy unique rewards, offers and travel insurance with a card designed for Advance customers.
-                        </p> <a type="button" class="btn btn-primary" href="creditcardForm.html">Apply Now
-                            <span style="font-size: 14px;" class="ms-2 fas fa-arrow-right"></span></a>
+                        <h1 class="text-capitalize mb-4">Cashback</h1>
+                        <p class="mb-4">Use your points to get cashback and spend it on whatever you like !
                     </div>
                 </div>
+				<br>
                 <div class="col-lg-6">
                     <div class="ps-lg-5 text-center">
-                        <img loading="lazy" decoding="async" src="images/bluecreditcard.png" alt="blue creditcard image"
+                        <img loading="lazy" decoding="async" src="images/cashback2.jpg" alt="credit card image"
                             class="w-100">
                     </div>
                 </div>
