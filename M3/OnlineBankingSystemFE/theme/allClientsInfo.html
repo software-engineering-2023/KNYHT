@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>KNYHT - Online Banking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="This is meta description">
+    <meta name="author" content="Themefisher">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+
+
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="wallet" />
+
+    <!-- # Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- # CSS Plugins -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/brands.css">
+    <link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+    <!-- # Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- navigation -->
+<header class="navigation bg-tertiary">
+  <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+    <div class="container">
+      <a class="navbar-brand" href="bankerhome.html">
+        <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.jpg" alt="Wallet">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"> <a class="nav-link" href="bankerhome.html">Home</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="announcements.html">Announcements</a>
+          </li>
+          <li class="nav-item "> <a class="nav-link" href="report.html">Report</a>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Clients</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item " href="clientaccount.html">Open Bank Account</a>
+              </li>
+              <li><a class="dropdown-item " href="allClientsInfo.html">View Clients</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Applications</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item " href="CreditCardApplication.html">Credit Cards</a>
+              </li>
+              <li><a class="dropdown-item " href="bankerloanapplication.html">Loans</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- /navigation -->
+
+<html>
+
+<style>
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li,
+    table {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    header {
+        background-color: #005c4d;
+        color: #fff;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .dashboard h2,
+    .users h2,
+    .transactions h2 {
+        color: #005c4d;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .stat {
+        flex-basis: 30%;
+        padding: 20px;
+        background-color: #d9f2ec;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .stat h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #00654c;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #d9f2ec;
+        color: #00654c;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #005c4d;
+        color: #fff;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>KNYHT Bank Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<main>
+    <section class="dashboard">
+        <h2>Dashboard</h2>
+        <div class="stats">
+            <div class="stat">
+                <h3>Total Users</h3>
+                <p>3</p>
+            </div>
+            <div class="stat">
+                <h3>Total Transactions</h3>
+                <p>2,000</p>
+            </div>
+            <div class="stat">
+                <h3>Total Deposits</h3>
+                <p>$1,000,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="users">
+        <h2>Users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>Customer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>janesmith@example.com</td>
+                    <td>Customer</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Client</td>
+                    <td>client@example.com</td>
+                    <td>Customer</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="transactions">
+        <h2>Recent Transactions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2023-05-15</td>
+                    <td>$500</td>
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2023-05-14</td>
+                    <td>$1000</td>
+                    <td>Jane Smith</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2023-05-10</td>
+                    <td>$200</td>
+                    <td>John Doe</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>© 2023 KNYHT Bank. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

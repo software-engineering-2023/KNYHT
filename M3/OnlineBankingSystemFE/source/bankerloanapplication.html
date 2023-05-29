@@ -1,165 +1,177 @@
 <!DOCTYPE html>
 @@include('_headerAdmin&Banker.htm')
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  color: white;
-  background-color: black;
-  
-}
-td {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  color: black;
-  
-}
-input{
-  color: white;
-  background-color: green;
-}
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: white;
+    background-color: #005c4d;
+
+  }
+
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: black;
+
+  }
+
+  input {
+    color: white;
+    background-color: #005c4d;
+    border: none;
+    border-radius: 3px;
+  }
 
 
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 </style>
 
 <body>
 
-<h2>Loan Applications</h2>
+  <h2>Loan Applications</h2>
 
-<table id="loantable">
-  <tr>
-    <th>Account Number</th>
-    <th>Client Name</th>
-    <th>Amount</th>
-    <th>Type</th>
-    <th>Balance</th>
-    <th>Mobile Number</th>
-    <th>Email</th>
-    <th>Status</th>
-    <th></th>
-    
-    
-    
-    
-  </tr>
-  <tr>
-    <td>003425276890</td>
-    <td>Francisco Chang</td>
-    <td>100,000</td>
-    <td>Personal</td>
-    <td>10,000</td>
-    <td>01034256789</td>
-    <td>fran.chang@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      
-        </td>
+  <table id="loantable">
+    <tr>
+      <th>Account Number</th>
+      <th>Client Name</th>
+      <th>Amount</th>
+      <th>Type</th>
+      <th>Balance</th>
+      <th>Mobile Number</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th></th>
+
+
+
+
+    </tr>
+    <tr>
+      <td>003425276890</td>
+      <td>Francisco Chang</td>
+      <td>100,000</td>
+      <td>Personal</td>
+      <td>10,000</td>
+      <td>01034256789</td>
+      <td>fran.chang@gmail.com</td>
+      <td>
+        <form>
+          <label for="status"></label>
+          <select>
+            <option value="unresolved">Unresloved</option>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+          </select>
+
+      </td>
       <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>456372689005</td>
-    <td>Roland Mendel</td>
-    <td>700,000</td>
-    <td>Car</td>
-    <td>100,000</td>
-    <td>01111675439</td>
-    <td>roland@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>567443338790</td>
-    <td>Helen Bennett</td>
-    <td>500,000</td>
-    <td>Personal</td>
-    <td>100,000</td>
-    <td>01087654534</td>
-    <td>helen.ben@gmail.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>344455332911</td>
-    <td>Yoshi Tannamuri</td>
-    <td>1,000,000</td>
-    <td>Car</td>
-    <td>500,000</td>
-    <td>01034232396</td>
-    <td>yoshi@yahoo.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  <tr>
-    <td>993322432111</td>
-    <td>Maria Anders</td>
-    <td>3,000,000</td>
-    <td>Personal</td>
-    <td>1,000,000</td>
-    <td>011345678910</td>
-    <td>maria.anders@yahoo.com</td>
-    <td><form>
-      <label for="status"></label>
-      <select>
-        <option value="unresolved">Unresloved</option>
-        <option value="accept">Accept</option>
-        <option value="reject">Reject</option>
-      </select>
-      <br><br>
-    </form></td>
-    <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
-  </tr>
-  
-  
-</table>
-<script>
+      </form>
+      </td>
+      <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+    </tr>
+    <tr>
+      <td>456372689005</td>
+      <td>Roland Mendel</td>
+      <td>700,000</td>
+      <td>Car</td>
+      <td>100,000</td>
+      <td>01111675439</td>
+      <td>roland@gmail.com</td>
+      <td>
+        <form>
+          <label for="status"></label>
+          <select>
+            <option value="unresolved">Unresloved</option>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+          </select>
+          <br><br>
+        </form>
+      </td>
+      <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+    </tr>
+    <tr>
+      <td>567443338790</td>
+      <td>Helen Bennett</td>
+      <td>500,000</td>
+      <td>Personal</td>
+      <td>100,000</td>
+      <td>01087654534</td>
+      <td>helen.ben@gmail.com</td>
+      <td>
+        <form>
+          <label for="status"></label>
+          <select>
+            <option value="unresolved">Unresloved</option>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+          </select>
+          <br><br>
+        </form>
+      </td>
+      <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+    </tr>
+    <tr>
+      <td>344455332911</td>
+      <td>Yoshi Tannamuri</td>
+      <td>1,000,000</td>
+      <td>Car</td>
+      <td>500,000</td>
+      <td>01034232396</td>
+      <td>yoshi@yahoo.com</td>
+      <td>
+        <form>
+          <label for="status"></label>
+          <select>
+            <option value="unresolved">Unresloved</option>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+          </select>
+          <br><br>
+        </form>
+      </td>
+      <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+    </tr>
+    <tr>
+      <td>993322432111</td>
+      <td>Maria Anders</td>
+      <td>3,000,000</td>
+      <td>Personal</td>
+      <td>1,000,000</td>
+      <td>011345678910</td>
+      <td>maria.anders@yahoo.com</td>
+      <td>
+        <form>
+          <label for="status"></label>
+          <select>
+            <option value="unresolved">Unresloved</option>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+          </select>
+          <br><br>
+        </form>
+      </td>
+      <td><input type="button" value="Submit" onclick="deleteRow(this)"></td>
+    </tr>
+
+
+  </table>
+  <script>
     function deleteRow(r) {
       var i = r.parentNode.parentNode.rowIndex;
       document.getElementById("loantable").deleteRow(i);
     }
-    </script>
+  </script>
 </body>
-
-

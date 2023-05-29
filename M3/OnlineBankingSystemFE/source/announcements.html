@@ -1,0 +1,61 @@
+@@include('_headerAdmin&Banker.htm')
+<!DOCTYPE html>
+<html>
+<style>
+    .banker-page {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .announcement-form label,
+    .announcement-form input,
+    .announcement-form textarea,
+    .announcement-form button {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .announcement-form input,
+    .announcement-form textarea {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .announcement-form button {
+        background-color: #005c4d;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .announcement-form button:hover {
+        background-color: #003f33;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Announcement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="banker-page">
+        <h2>Announcement</h2>
+        <form class="announcement-form">
+            <label for="announcement-title">Announcement Title:</label>
+            <input type="text" id="announcement-title" name="announcement-title" placeholder="Enter the title">
+
+            <label for="announcement-content">Announcement Content:</label>
+            <textarea id="announcement-content" name="announcement-content" placeholder="Enter the content"></textarea>
+
+            <button type="submit">Post Announcement</button>
+        </form>
+    </div>
+</body>
+
+</html>

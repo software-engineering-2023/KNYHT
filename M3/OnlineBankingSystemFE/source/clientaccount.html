@@ -1,75 +1,135 @@
 <!DOCTYPE html>
 @@include('_headerAdmin&Banker.htm')
 <style>
-  button {
-    color: white;
-    background-color: green;
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  li,
+  table {
+    margin: 0;
+    padding: 0;
   }
 
-  label {
-    color: black;
-    padding: 12px;
-
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
   }
 
+  header {
+    background-color: #005c4d;
+    color: #fff;
+    padding: 20px;
+  }
 
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .dashboard h2,
+  .users h2,
+  .transactions h2 {
+    color: #005c4d;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stat {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: #d9f2ec;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .stat h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00654c;
+  }
 
   table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
     width: 100%;
-    color: black;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
   }
 
   th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-    color: white;
-    background-color: black;
-
+    background-color: #d9f2ec;
+    color: #00654c;
+    font-weight: bold;
   }
 
-  td {
-    border: 1px solid #dddddd;
+  footer {
     text-align: center;
-    padding: 8px;
-    color: black;
-
+    padding: 10px;
+    background-color: #005c4d;
+    color: #fff;
   }
 
-
-
-  tr:nth-child(even) {
-    background-color: #dddddd;
-    color: black;
+  button {
+    background-color: green;
+    color: white
   }
 </style>
 
-<body>
 
-  <h2>Create client account</h2>
+<div class="container">
+  <h2>Open Bank Account</h2>
 
-
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=" "><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=" "><br>
-  <label for="amount">Amount:</label><br>
-  <input type="text" id="amount" name="amount" value=" "><br>
-  <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email" value=" "><br>
-  <label for="mobilenumber">Mobile Number:</label><br>
-  <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value=" "><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value=" "><br>
+    <label for="amount">Amount:</label><br>
+    <input type="text" id="amount" name="amount" value=" "><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" value=" "><br>
+    <label for="mobilenumber">Mobile Number:</label><br>
+    <input type="text" id="mobilenumber" name="mobilenumber" value=" "><br><br>
 
   </form>
 
   <button type="button" onclick="createClientAccount()">Submit</button>
-  <script>
-    function createClientAccount() {
-      alert('Account created successfully!');
-      window.location.href = "clientaccount.html";
-    }
-  </script>
-
-</body>
+</div>
+<script>
+  function createClientAccount() {
+    alert('Account created successfully!');
+    window.location.href = "clientaccount.html";
+  }
+</script>
